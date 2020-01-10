@@ -27,19 +27,33 @@ p {
     @include md {
         max-width: var(--site-width);
         margin: 0 auto;
+        padding: 0;
     }
     > * {
         text-transform: uppercase;
     }
+    &__photo {
+        z-index: -10;
+    }
     &__title-block {
         position: absolute;
+        bottom: 20px;
+        @include center(horizontal);
         text-align: center;
     }
     &__title {
-        color: var(--color-base);
+        color: var(--color-white);
         @include font-size(100);
         font-weight: 700;
         max-width: var(--site-width);
+    }
+    &__subtitle {
+        color: var(--color-white);
+    }
+    &__badge {
+        position: absolute;
+        bottom: 200px;
+        left: 20px;
     }
 }
 

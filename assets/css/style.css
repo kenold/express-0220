@@ -61,15 +61,28 @@ p {
   @media (min-width: 768px) {
     .cover {
       max-width: var(--site-width);
-      margin: 0 auto; } }
+      margin: 0 auto;
+      padding: 0; } }
   .cover > * {
     text-transform: uppercase; }
+  .cover__photo {
+    z-index: -10; }
   .cover__title-block {
     position: absolute;
+    bottom: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
     text-align: center; }
   .cover__title {
-    color: var(--color-base);
+    color: var(--color-white);
     font-size: 100;
     font-size: 6.25rem;
     font-weight: 700;
     max-width: var(--site-width); }
+  .cover__subtitle {
+    color: var(--color-white); }
+  .cover__badge {
+    position: absolute;
+    bottom: 200px;
+    left: 20px; }
