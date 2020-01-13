@@ -11,6 +11,7 @@ html {
 
 body {
     font-weight: 400;
+    margin-top: 1rem;
 }
 img {
     width: 100%;
@@ -22,6 +23,7 @@ p {
 }
 
 .cover {
+    border: 1px solid rgb(236, 235, 235);
     padding: 0 16px;
     position: relative;
     @include md {
@@ -38,7 +40,6 @@ p {
     &__title-block {
         position: absolute;
         bottom: 20px;
-        //@include center(horizontal);
         text-align: center;
     }
     &__title {
@@ -49,15 +50,19 @@ p {
     }
     &__subtitle {
         color: var(--color-white);
+        @include font-size(14);
+        font-weight: normal;
+        letter-spacing: 1px;
+        margin-bottom: -.5rem;
     }
     &__badge {
         position: absolute;
-        bottom: 230px;
+        bottom: 200px;
         left: 20px;
         background-color: var(--color-white);
         padding: 30px;
-        width: 150px;
-        height: 150px;
+        width: 145px;
+        height: 145px;
         border-radius: 100%;
         display: flex;
         flex-direction: column;
@@ -67,9 +72,16 @@ p {
     }
     .badge {
         &__title {
-            @include font-size(30);
+            @include font-size(28);
             letter-spacing: 2px;
             font-weight: 500;
+        }
+        &__subtitle {
+            font-weight: 500;
+            line-height: 20px;
+        }
+        &__details {
+            @include font-size(14);
         }
     }
 }
